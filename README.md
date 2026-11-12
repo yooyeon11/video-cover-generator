@@ -81,9 +81,7 @@ python -m PyInstaller --noconfirm --clean --onefile --windowed ^
   --distpath dist --workpath build --specpath build 视频封面生成器.pyw
 ```
 
-打包后把 `fonts` 文件夹复制到 exe 同目录。仓库另附 [`ci/build.yml.example`](ci/build.yml.example)：需要 CI 自动构建时，把它复制到 `.github/workflows/build.yml` 即可。
-
-> 注意：用 Personal Access Token 推送 `.github/workflows/` 下的文件时，token 需要额外勾选 `workflow` 权限，否则 GitHub 会拒绝该次 push。
+打包后把 `fonts` 文件夹复制到 exe 同目录。仓库里的 GitHub Actions 工作流会在每次 push 时自动构建一份 Windows 产物（Actions → Build Windows exe）。
 
 > 两个已踩过的坑：`--icon` 传相对路径会被解析到 `--specpath` 指定的目录而找不到文件，必须给绝对路径；`--windowed` 打包后 `sys.stdout` 为 `None`，代码里所有输出都要做空值保护。
 
