@@ -1,0 +1,5 @@
+# 运行时依赖（tkinter 属于 Python 标准库，无需安装）
+tkinterdnd2>=0.4.0
+
+# 仅打包 exe 时需要
+pyinstaller>=6.0

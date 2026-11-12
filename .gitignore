@@ -1,0 +1,29 @@
+# 临时工作区 / 测试产物
+.work/
+__pycache__/
+*.py[cod]
+*.log
+cli.log
+*.jpg
+*.png
+_test/
+chk/
+
+# 打包产物
+build/
+dist/
+*.spec
+*.exe
+
+# ffmpeg 二进制体积过大，不入库
+ffmpeg/
+bin/
+
+# 闭源系统字体，禁止入库
+fonts/msyh.ttc
+fonts/msyhbd.ttc
+fonts/simhei.ttf
+
+# 系统文件
+Thumbs.db
+.DS_Store
